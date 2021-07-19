@@ -1,0 +1,5 @@
+### Writting the contents to the excel and formatting ############
+a. Run the program :- com.tejas.excelwritting.TestIncidentDetailswritting
+
+##### To read the contents of the excel ###########################
+a. com.tejas.excelReader <<Excelfilename with the completePath>>
