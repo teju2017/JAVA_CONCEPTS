@@ -2,6 +2,7 @@ package banking;
 
 import java.util.LinkedHashMap;
 
+
 /**
  * Private Variables:<br>
  * {@link #accounts}: List&lt;Long, Account&gt;
@@ -10,12 +11,11 @@ public class Bank implements BankInterface {
 	private LinkedHashMap<Long, Account> accounts;
 
 	public Bank() {
-		// complete the function
+		accounts=new LinkedHashMap<>();
 	}
 
 	private Account getAccount(Long accountNumber) {
-		// complete the function
-        return null;
+		return accounts.get(accountNumber);
 	}
 
 	public Long openCommercialAccount(Company company, int pin, double startingDeposit) {

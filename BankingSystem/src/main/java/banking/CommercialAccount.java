@@ -11,16 +11,24 @@ import java.util.List;
  */
 public class CommercialAccount  {
 	private List<Person> authorizedUsers;
+	public Long accountNumber;
+	public int pin;
+	public double startingDeposits;
+	
 
 	public CommercialAccount(Company company, Long accountNumber, int pin, double startingDeposit) {
-		// complete the function
+		authorizedUsers=new ArrayList<>();
+		this.accountNumber=accountNumber;
+		this.pin=pin;
+		this.startingDeposits=startingDeposit;
+		
 	}
 
 	/**
 	 * @param person The authorized user to add to the account.
 	 */
 	protected void addAuthorizedUser(Person person) {
-		// complete the function
+		authorizedUsers.add(person);
 	}
 
 	/**
@@ -28,7 +36,7 @@ public class CommercialAccount  {
 	 * @return true if person matches an authorized user in {@link #authorizedUsers}; otherwise, false.
 	 */
 	public boolean isAuthorizedUser(Person person) {
-		// complete the function
-        return true;
+		return authorizedUsers.contains(person);
+       
 	}
 }
