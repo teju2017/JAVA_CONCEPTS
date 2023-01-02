@@ -30,20 +30,21 @@ public class Bank implements BankInterface {
 
 	public boolean authenticateUser(Long accountNumber, int pin) {
 		// complete the function
-        return true;
+        return accounts.get(accountNumber).validatePin(pin);
 	}
 
 	public double getBalance(Long accountNumber) {
-		// complete the function
-        return -1;
+		return accounts.get(accountNumber).getBalance();
 	}
 
 	public void credit(Long accountNumber, double amount) {
 		// complete the function
+		Double balance=accounts.get(accountNumber).getBalance()+amount;
+	
 	}
 
 	public boolean debit(Long accountNumber, double amount) {
 		// complete the function
-        return true;
+        return accounts.get(accountNumber).debitAccount(amount);
 	}
 }
