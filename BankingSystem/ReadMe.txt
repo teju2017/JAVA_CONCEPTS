@@ -10,6 +10,11 @@ Set up the Maven
 Run the mvn clean install command
 Below test case status will be displayed
 
+Question:- 
+
+Refer the UML diagram for the relationship between the classes 
+Filename:- banking_hackerrank.png
+
 -------------------------------------------------------
  T E S T S
 -------------------------------------------------------
