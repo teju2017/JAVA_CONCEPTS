@@ -5,6 +5,9 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
+import java.util.Map;
+import java.util.Map.Entry;
+
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -92,9 +95,10 @@ public class HiddenTest {
 
 	/**
 	 * Debit an account.
+	 * @throws Exception 
 	 */
 	@Test
-	public void debitTest() {
+	public void debitTest() throws Exception {
 		double amount = 200.0;
 		assertFalse("Account " + john + " should have insufficient funds.", bank.debit(john, amount));
 		assertTrue("Account " + julia + " should have sufficient funds.", bank.debit(julia, amount));
@@ -105,9 +109,10 @@ public class HiddenTest {
 
 	/**
 	 * Test crediting accounts inside {@link Bank}.
+	 * @throws Exception 
 	 */
 	@Test
-	public void bankCreditTest() {
+	public void bankCreditTest() throws Exception {
 		double amount = 500.00;
 		double beforeDeposit1 = bank.getBalance(john);
 		double beforeDeposit2 = bank.getBalance(julia);
@@ -156,6 +161,11 @@ public class HiddenTest {
 		assertEquals(beforeDeposit1, transaction1.getBalance(), 0);
 		assertEquals(transaction1.getBalance(), bank.getBalance(daniel), 0);
 	}
+	
+		
+
+	
+	
 	@Test
 	public void transactionTest2() throws Exception{
 		Transaction t2 = new Transaction(bank, john, 1111);
@@ -167,4 +177,6 @@ public class HiddenTest {
 		assertEquals(beforeDeposit1, t2.getBalance(), 0);
 		assertEquals(t2.getBalance(), bank.getBalance(john), 0);
 	}
+	
+	
 }

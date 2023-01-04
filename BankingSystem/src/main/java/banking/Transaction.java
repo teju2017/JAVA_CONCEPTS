@@ -6,9 +6,11 @@ package banking;
  * {@link #accountNumber}: Long<br>
  * {@link #bank}: Bank<br>
  */
-public class Transaction {
+public class Transaction extends Bank implements TransactionInterface{
 	private Long accountNumber;
 	private Bank bank;
+	private int attemptedPin;
+	
 
 	/**
 	 *
@@ -23,21 +25,39 @@ public class Transaction {
 	 */
 	public Transaction(Bank bank, Long accountNumber, int attemptedPin) throws Exception {
 		// complete the function
+		super();
+		this.attemptedPin=attemptedPin;
 		this.bank=bank;
 		this.accountNumber=accountNumber;
+		if(!bank.authenticateUser(accountNumber, attemptedPin))
+		{
+			throw new Exception();
+		}
+		
 	}
 
 	public double getBalance() {
 		// complete the function
-        return -1;
+		 return bank.getBalance(accountNumber);
+        
+        
 	}
 
 	public void credit(double amount) {
 		// complete the function
+		bank.credit(accountNumber, amount);
+		
 	}
 
 	public boolean debit(double amount) {
-		// complete the function
-        return true;
+		if(Double.compare(bank.getBalance(accountNumber), amount) < 0)
+		{
+			
+			return false;
+		}
+		bank.debit(accountNumber, amount);
+		return true;
+		
+        
 	}
 }

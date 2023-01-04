@@ -1,6 +1,7 @@
 package banking;
 
 import java.util.LinkedHashMap;
+import java.util.Random;
 
 
 /**
@@ -9,27 +10,49 @@ import java.util.LinkedHashMap;
  */
 public class Bank implements BankInterface {
 	private LinkedHashMap<Long, Account> accounts;
+	private Random random;
+	Long accountNumberGeneration;
+	
+	
 
-	public Bank() {
+	public Bank() throws Exception {
 		accounts=new LinkedHashMap<>();
-	}
-
+		random = new Random();
+		accountNumberGeneration=new Random().nextLong(1, 10000);
+		}
+	
 	private Account getAccount(Long accountNumber) {
 		return accounts.get(accountNumber);
 	}
+	
+	public LinkedHashMap<Long, Account> getAccountDetails()
+	{
+		return accounts;
+	}
 
 	public Long openCommercialAccount(Company company, int pin, double startingDeposit) {
-		// complete the function
-        return -1L;
+		while(accountNumberGeneration < 10000)
+		{
+		 accountNumberGeneration++;
+          CommercialAccount commercialAccount = new CommercialAccount(company, accountNumberGeneration, pin, startingDeposit);
+		  accounts.put(accountNumberGeneration, commercialAccount);
+          return accountNumberGeneration;
+		}
+		return -1L;
 	}
 
 	public Long openConsumerAccount(Person person, int pin, double startingDeposit) {
-		// complete the function
-        return -1L;
+		while(accountNumberGeneration < 10000)
+		{
+			accountNumberGeneration++;
+		ConsumerAccount consumerAcc = new ConsumerAccount(person, accountNumberGeneration, pin, startingDeposit);
+		accounts.put(accountNumberGeneration,consumerAcc);
+		return accountNumberGeneration;
+		}
+		return -2L;
 	}
 
 	public boolean authenticateUser(Long accountNumber, int pin) {
-		// complete the function
         return accounts.get(accountNumber).validatePin(pin);
 	}
 
@@ -38,13 +61,10 @@ public class Bank implements BankInterface {
 	}
 
 	public void credit(Long accountNumber, double amount) {
-		// complete the function
-		Double balance=accounts.get(accountNumber).getBalance()+amount;
-	
+		accounts.get(accountNumber).creditAccount(amount);
 	}
 
 	public boolean debit(Long accountNumber, double amount) {
-		// complete the function
         return accounts.get(accountNumber).debitAccount(amount);
 	}
 }

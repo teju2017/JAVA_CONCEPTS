@@ -9,18 +9,12 @@ import java.util.List;
  * Private Variables:<br>
  * {@link #authorizedUsers}: List&lt;Person&gt;<br>
  */
-public class CommercialAccount  {
+public class CommercialAccount extends Account {
 	private List<Person> authorizedUsers;
-	public Long accountNumber;
-	public int pin;
-	public double startingDeposits;
 	
 
 	public CommercialAccount(Company company, Long accountNumber, int pin, double startingDeposit) {
-		authorizedUsers=new ArrayList<>();
-		this.accountNumber=accountNumber;
-		this.pin=pin;
-		this.startingDeposits=startingDeposit;
+		super(company,accountNumber,pin,startingDeposit);
 		
 	}
 
