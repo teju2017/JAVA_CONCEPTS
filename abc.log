@@ -1,0 +1,2 @@
+2023-06-17 00:06:20,959 INFO c.t.t.WorkingExample [main] Working ok
+2023-06-17 00:06:20,962 ERROR c.t.t.WorkingExample [main] Some serious error

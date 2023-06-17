@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" strict="true">
+	<properties>
+		<property name="filevalue">test.log</property>
+		<property name="basedir">C:\Users\User\eclipse-workspace\log4j-Implementation</property>
+	</properties>
+<Appenders>
+   <Console name="Console" target="SYSTEM_OUT">
+   <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+   </Console>
+       <Appender type="File" name="File" fileName="${filevalue}">
+      <Layout type="PatternLayout">
+        <Pattern>%d %p %C{1.} [%t] %m%n</Pattern>
+      </Layout>
+    </Appender>
+    <RollingFile name="RollingFile" fileName="app.log" filePattern="app-%d{MM-dd-yyyy}-%i.log.zip">
+      <PatternLayout>
+        <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+      </PatternLayout>
+      <Policies>
+        <TimeBasedTriggeringPolicy />
+        <SizeBasedTriggeringPolicy size="100 KB"/>
+      </Policies>
+      <DefaultRolloverStrategy>
+        <Delete basePath="${baseDir}" maxDepth="2">
+          <IfFileName glob="*app-*.log.zip">
+              <IfAny>
+                <IfAccumulatedFileCount exceeds="12" />
+              </IfAny>
+          </IfFileName>
+        </Delete>
+      </DefaultRolloverStrategy>
+    </RollingFile>
+  </Appenders>
+    
+ <Loggers>
+		 <Logger name="com.tejas.testSample.connectivity.Connectivity" level="INFO" additivity="false">
+        <AppenderRef ref="File"/>
+        <AppenderRef ref="Console"/>
+        <AppenderRef ref= "RollingFile"/>
+	    </Logger>
+   <Root level ="DEBUG" additivity="false">
+     <AppenderRef ref="Console"/>
+     <AppenderRef ref = "File"/>>
+  </Root>
+ </Loggers>
+</Configuration>
