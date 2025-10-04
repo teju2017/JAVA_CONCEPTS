@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="TestEstate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="externalId" type="xs:unsignedInt" />
+        <xs:element name="ttitle" type="xs:string" />
+        <xs:element name="creationDate" type="xs:dateTime" />
+        <xs:element name="lastModificationDate" type="xs:dateTime" />
+        <xs:element name="thermalCharacteristic" type="xs:decimal" />
+        <xs:element name="energyConsumptionContainsWarmWater" type="xs:string" />
+        <xs:element name="buildingEnergyRatingType" type="xs:string" />
+        <xs:element name="additionalArea" type="xs:decimal" />
+        <xs:element name="numberOfFloors" type="xs:string" />
+        <xs:element name="AdditionalCosts">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="value" type="xs:decimal" />
+              <xs:element name="currency" type="xs:string" />
+              <xs:element name="marketingType" type="xs:string" />
+              <xs:element name="priceIntervalType" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,43 @@
+<person>
+  <name first="John" last="Doe"/>
+  <emails>
+    <email>john@example.com</email>
+    <email>doe.john@work.com</email>
+  </emails>
+  <phones>
+    <phone></phone>
+    <phone>1234567890</phone>
+    <phone></phone>
+  </phones>
+  <tags>
+    <tag></tag>
+    <tag>active</tag>
+    <tag></tag>
+  </tags>
+  <addresses>
+  <address>
+    <line1>123 Main St</line1>
+    <line2></line2>
+    <city>Metropolis</city>
+    <zipcode/>
+  </address>
+   <address>
+    <line1>TestOne</line1>
+    <line2>1233</line2>
+    <city>Hassan</city>
+    <zipcode/>
+  </address>
+  </addresses>
+  <notes></notes>
+  <roles>
+    <role>admin</role>
+  </roles>
+  <TestAttr abc="tejas">
+	  <abc/>
+	  <abc/>
+	  <abc/>
+  </TestAttr>
+  <dispatchDetails adhocAddress="True">
+	  <adhocAddress/>
+  </dispatchDetails>
+</person>
