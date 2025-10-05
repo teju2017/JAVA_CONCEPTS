@@ -1,4 +1,4 @@
-package com.test.modelCheck;
+package com.manual.coded;
 
 import java.util.Date;
 

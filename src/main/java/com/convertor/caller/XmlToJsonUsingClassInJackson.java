@@ -1,4 +1,4 @@
-package com.test.work;
+package com.convertor.caller;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -14,8 +14,8 @@ import com.fasterxml.jackson.databind.DeserializationConfig;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import com.test.modelCheck.AdditionalCosts;
-import com.test.modelCheck.RealEstates;
+import com.manual.coded.AdditionalCosts;
+import com.manual.coded.RealEstates;
 
 public class XmlToJsonUsingClassInJackson {
 	
