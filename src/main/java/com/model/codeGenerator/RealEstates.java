@@ -21,6 +21,15 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import jakarta.xml.bind.*;
 import jakarta.xml.bind.annotation.*;
 
+/*  !!!  ######## ###
+ *  Make efficient usage of Jackson annotation to deal with these conversions
+ *  @JsonIgnoreProperties(ignoreUnknown = true) ==> To ignore unknown elements
+ *  ==> Below two annotations when we want to output a property as an array regardless of their iteration
+ *  @JacksonXmlElementWrapper(useWrapping = false)
+	@JacksonXmlProperty(localName = "PROPERTY NAME")
+    Takeout @XmlElement when the attributes doesnt have that element
+ */
+
 /**
  * <p>
  * Java class for anonymous complex type.
@@ -120,6 +129,10 @@ import jakarta.xml.bind.annotation.*;
  * 
  * 
  */
+
+
+
+
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = { "externalId", "ttitle", "creationDate", "lastModificationDate",
 		"thermalCharacteristic", "energyConsumptionContainsWarmWater", "buildingEnergyRatingType", "additionalArea",

@@ -19,33 +19,30 @@ import com.test.modelCheck.RealEstates;
 
 public class XmlToJsonUsingClassInJackson {
 	
-	
-	  public InputStreamReader readTextFile() {
-	        try (
-	        	InputStream is = getClass().getClassLoader().getResourceAsStream("myFile.txt");
-	            InputStreamReader isr = new InputStreamReader(is, StandardCharsets.UTF_8);
-	            BufferedReader br = new BufferedReader(isr)) {
 
-				/*
-				 * // Read the file line-by-line String line; while ((line = br.readLine()) !=
-				 * null) { System.out.println(line); }
-				 */
-	        	return isr;
+	  
+	  public byte[] getFileBytes(String fileName) {
+	        try
+	        {
+	        	
+	        	return FileUtils.readFileToByteArray(new File(getClass().getClassLoader().getResource(fileName).getFile()));
+	        	
 	        } catch (Exception e) {
 	            e.printStackTrace();
 	        }
 	        return null;
 	        
-	    }
+	    }	  
 
 	public static void main(String[] args) throws IOException {
+		XmlToJsonUsingClassInJackson obj = new XmlToJsonUsingClassInJackson();
 		XmlMapper xmlMapper = new XmlMapper();
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 		
 		
 		  RealEstates realestate =
-		  xmlMapper.readValue(FileUtils.readFileToByteArray(new File("Testing.xml")),
+		  xmlMapper.readValue(obj.getFileBytes("Testing.xml"),
 		  RealEstates.class);
 		  
 		  String json =
@@ -54,8 +51,7 @@ public class XmlToJsonUsingClassInJackson {
 		 
 
 		
-		  com.model.codeGenerator.RealEstates realestate1 = xmlMapper.readValue(
-		  FileUtils.readFileToByteArray(new File("Testing.xml")),
+		  com.model.codeGenerator.RealEstates realestate1 = xmlMapper.readValue(obj.getFileBytes("Testing.xml"),
 		  com.model.codeGenerator.RealEstates.class); String jsonAutomated =
 		  mapper.writerWithDefaultPrettyPrinter().writeValueAsString(realestate1);
 		  System.out.println("############ JSON AUTOMATED #####################");
