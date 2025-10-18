@@ -10,6 +10,7 @@ package com.model.codeGenerator;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.xml.datatype.XMLGregorianCalendar;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -18,8 +19,11 @@ import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
-import jakarta.xml.bind.*;
-import jakarta.xml.bind.annotation.*;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
 
 /*  !!!  ######## ###
  *  Make efficient usage of Jackson annotation to deal with these conversions
@@ -810,11 +814,11 @@ public class RealEstates {
 		@XmlAccessorType(XmlAccessType.FIELD)
 		@XmlType(name = "", propOrder = { "take2" })
 		public static class Take1 {
-			
-			  
-			  @JacksonXmlElementWrapper(useWrapping = false)  
-			  @JacksonXmlProperty(localName = "Take2")
-			 protected List<RealEstates.Take.Take1.Take2> take2;
+
+
+			@JacksonXmlElementWrapper(useWrapping = false)  
+			@JacksonXmlProperty(localName = "Take2")
+			protected List<RealEstates.Take.Take1.Take2> take2;
 
 			/**
 			 * Gets the value of the take2 property.

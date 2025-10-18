@@ -11,8 +11,20 @@
 	<numberOfFloors>three</numberOfFloors>
 	<Cost>
 	<AdditionalCosts>
-		<value>249.014</value>
+		<value>242.014</value>
 		<currency>EUR</currency>
+		<marketingType>RENT</marketingType>
+		<priceIntervalType>MONTH</priceIntervalType>
+	</AdditionalCosts>
+	<AdditionalCosts>
+		<value>243.014</value>
+		<currency>EUR</currency>
+		<marketingType>RENT</marketingType>
+		<priceIntervalType>MONTH</priceIntervalType>
+	</AdditionalCosts>
+	<AdditionalCosts>
+		<value>244.014</value>
+		<currency>JPY</currency>
 		<marketingType>RENT</marketingType>
 		<priceIntervalType>MONTH</priceIntervalType>
 	</AdditionalCosts>
@@ -48,4 +60,12 @@
 		<Junkx1>sdsdd</Junkx1>
 	</Junk>
 	<newField/>
+	<Instances>
+		<Instance>
+		  <NAME>xcd</NAME>
+		  <REGION>sdsf</REGION>
+		  <TESTED/>
+		</Instance>
+	</Instances>
+	
 </RealEstates>

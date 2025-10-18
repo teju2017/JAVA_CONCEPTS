@@ -28,10 +28,22 @@ public class RealEstates {
 	private Junk junk;
 	@JsonProperty("Take")
 	private Take take;
+	@JsonProperty("Instances")
+	private Instances instance;
 	
 	
 	
 	
+	
+	
+
+	public Instances getInstance() {
+		return instance;
+	}
+
+	public void setInstance(Instances instance) {
+		this.instance = instance;
+	}
 
 	public Take getTake() {
 		return take;
