@@ -10,14 +10,14 @@ public class Instances {
 	
 	@JacksonXmlElementWrapper(useWrapping = false)
     @JacksonXmlProperty(localName = "Instance")
-	private List<Instance> listOfInstance;
+	private List<Instance> listOfIns;
 
 	public List<Instance> getListOfInstance() {
-		return listOfInstance;
+		return listOfIns;
 	}
 
 	public void setListOfInstance(List<Instance> listOfInstance) {
-		this.listOfInstance = listOfInstance;
+		this.listOfIns = listOfInstance;
 	}
 	
 	

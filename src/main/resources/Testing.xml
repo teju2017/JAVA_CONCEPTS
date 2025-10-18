@@ -65,7 +65,28 @@
 		  <NAME>xcd</NAME>
 		  <REGION>sdsf</REGION>
 		  <TESTED/>
+		  <SubInstances>
+			  <SubInstance>
+				  <branchName>BNI</branchName>
+				  <branchId>102</branchId>
+			  </SubInstance>
+			  <SubInstance>
+				  <branchName>BNP</branchName>
+				  <branchId>203</branchId>
+				  <MINUTEDETAILS>
+					  <LEV1>Test1</LEV1>
+					  <LEV2>TestExample</LEV2>
+					  <LEVS>
+					  <LEV3>
+						  <low1>LOW1</low1>
+						  <low2>LOW2</low2>
+					  </LEV3>
+					  </LEVS>
+				  </MINUTEDETAILS>
+			  </SubInstance>
+		  </SubInstances>
 		</Instance>
+		
 	</Instances>
 	
 </RealEstates>

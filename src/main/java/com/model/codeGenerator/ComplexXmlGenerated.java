@@ -144,7 +144,7 @@ import jakarta.xml.bind.annotation.XmlType;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JacksonXmlRootElement(localName = "RealEstates")
-public class RealEstates {
+public class ComplexXmlGenerated {
 
 	@XmlSchemaType(name = "unsignedInt")
 	protected long externalId;
@@ -167,11 +167,11 @@ public class RealEstates {
 	@XmlElement(required = true)
 	protected String numberOfFloors;
 	@JsonProperty("Cost")
-	protected RealEstates.Cost cost;
+	protected ComplexXmlGenerated.Cost cost;
 	@JsonProperty("Take")
-	protected RealEstates.Take take;
+	protected ComplexXmlGenerated.Take take;
 	@XmlElement(name = "Junk", required = true)
-	protected RealEstates.Junk junk;
+	protected ComplexXmlGenerated.Junk junk;
 	@XmlElement(required = true)
 	protected Object newField;
 
@@ -354,60 +354,60 @@ public class RealEstates {
 	/**
 	 * Gets the value of the cost property.
 	 * 
-	 * @return possible object is {@link RealEstates.Cost }
+	 * @return possible object is {@link ComplexXmlGenerated.Cost }
 	 * 
 	 */
-	public RealEstates.Cost getCost() {
+	public ComplexXmlGenerated.Cost getCost() {
 		return cost;
 	}
 
 	/**
 	 * Sets the value of the cost property.
 	 * 
-	 * @param value allowed object is {@link RealEstates.Cost }
+	 * @param value allowed object is {@link ComplexXmlGenerated.Cost }
 	 * 
 	 */
-	public void setCost(RealEstates.Cost value) {
+	public void setCost(ComplexXmlGenerated.Cost value) {
 		this.cost = value;
 	}
 
 	/**
 	 * Gets the value of the take property.
 	 * 
-	 * @return possible object is {@link RealEstates.Take }
+	 * @return possible object is {@link ComplexXmlGenerated.Take }
 	 * 
 	 */
-	public RealEstates.Take getTake() {
+	public ComplexXmlGenerated.Take getTake() {
 		return take;
 	}
 
 	/**
 	 * Sets the value of the take property.
 	 * 
-	 * @param value allowed object is {@link RealEstates.Take }
+	 * @param value allowed object is {@link ComplexXmlGenerated.Take }
 	 * 
 	 */
-	public void setTake(RealEstates.Take value) {
+	public void setTake(ComplexXmlGenerated.Take value) {
 		this.take = value;
 	}
 
 	/**
 	 * Gets the value of the junk property.
 	 * 
-	 * @return possible object is {@link RealEstates.Junk }
+	 * @return possible object is {@link ComplexXmlGenerated.Junk }
 	 * 
 	 */
-	public RealEstates.Junk getJunk() {
+	public ComplexXmlGenerated.Junk getJunk() {
 		return junk;
 	}
 
 	/**
 	 * Sets the value of the junk property.
 	 * 
-	 * @param value allowed object is {@link RealEstates.Junk }
+	 * @param value allowed object is {@link ComplexXmlGenerated.Junk }
 	 * 
 	 */
-	public void setJunk(RealEstates.Junk value) {
+	public void setJunk(ComplexXmlGenerated.Junk value) {
 		this.junk = value;
 	}
 
@@ -475,25 +475,25 @@ public class RealEstates {
 
 		@JacksonXmlElementWrapper(useWrapping = false)
 		@JacksonXmlProperty(localName = "AdditionalCosts")
-		protected List<RealEstates.Cost.AdditionalCosts> additionalCosts;
+		protected List<ComplexXmlGenerated.Cost.AdditionalCosts> additionalCosts;
 
 		/**
 		 * Gets the value of the additionalCosts property.
 		 * 
-		 * @return possible object is {@link RealEstates.Cost.AdditionalCosts }
+		 * @return possible object is {@link ComplexXmlGenerated.Cost.AdditionalCosts }
 		 * 
 		 */
-		public List<RealEstates.Cost.AdditionalCosts> getAdditionalCosts() {
+		public List<ComplexXmlGenerated.Cost.AdditionalCosts> getAdditionalCosts() {
 			return additionalCosts;
 		}
 
 		/**
 		 * Sets the value of the additionalCosts property.
 		 * 
-		 * @param value allowed object is {@link RealEstates.Cost.AdditionalCosts }
+		 * @param value allowed object is {@link ComplexXmlGenerated.Cost.AdditionalCosts }
 		 * 
 		 */
-		public void setAdditionalCosts(List<RealEstates.Cost.AdditionalCosts> value) {
+		public void setAdditionalCosts(List<ComplexXmlGenerated.Cost.AdditionalCosts> value) {
 			this.additionalCosts = value;
 		}
 
@@ -746,7 +746,7 @@ public class RealEstates {
 
 		@JacksonXmlElementWrapper(useWrapping = false)
 		@JacksonXmlProperty(localName = "Take1")
-		protected List<RealEstates.Take.Take1> take1;
+		protected List<ComplexXmlGenerated.Take.Take1> take1;
 
 		/**
 		 * Gets the value of the take1 property.
@@ -767,13 +767,13 @@ public class RealEstates {
 		 * 
 		 * <p>
 		 * Objects of the following type(s) are allowed in the list
-		 * {@link RealEstates.Take.Take1 }
+		 * {@link ComplexXmlGenerated.Take.Take1 }
 		 * 
 		 * 
 		 */
-		public List<RealEstates.Take.Take1> getTake1() {
+		public List<ComplexXmlGenerated.Take.Take1> getTake1() {
 			if (take1 == null) {
-				take1 = new ArrayList<RealEstates.Take.Take1>();
+				take1 = new ArrayList<ComplexXmlGenerated.Take.Take1>();
 			}
 			return this.take1;
 		}
@@ -818,25 +818,25 @@ public class RealEstates {
 
 			@JacksonXmlElementWrapper(useWrapping = false)  
 			@JacksonXmlProperty(localName = "Take2")
-			protected List<RealEstates.Take.Take1.Take2> take2;
+			protected List<ComplexXmlGenerated.Take.Take1.Take2> take2;
 
 			/**
 			 * Gets the value of the take2 property.
 			 * 
-			 * @return possible object is {@link RealEstates.Take.Take1 .Take2 }
+			 * @return possible object is {@link ComplexXmlGenerated.Take.Take1 .Take2 }
 			 * 
 			 */
-			public List<RealEstates.Take.Take1.Take2> getTake2() {
+			public List<ComplexXmlGenerated.Take.Take1.Take2> getTake2() {
 				return take2;
 			}
 
 			/**
 			 * Sets the value of the take2 property.
 			 * 
-			 * @param value allowed object is {@link RealEstates.Take.Take1 .Take2 }
+			 * @param value allowed object is {@link ComplexXmlGenerated.Take.Take1 .Take2 }
 			 * 
 			 */
-			public void setTake2(List<RealEstates.Take.Take1.Take2> value) {
+			public void setTake2(List<ComplexXmlGenerated.Take.Take1.Take2> value) {
 				this.take2 = value;
 			}
 
